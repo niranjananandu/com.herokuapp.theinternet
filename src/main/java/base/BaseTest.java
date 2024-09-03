@@ -20,7 +20,7 @@ public class BaseTest {
 	protected Properties p;
 	
 	@Parameters({"browser"})
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUp(String browser, ITestContext ctx) throws IOException {
 		String testName = ctx.getCurrentXmlTest().getName();
 		log = LogManager.getLogger(testName);
@@ -38,7 +38,7 @@ public class BaseTest {
 		
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		log.info("Executing Teardown method");
 		driver.close();

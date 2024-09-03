@@ -13,11 +13,10 @@ import base.TestUtilities;
 
 public class LoginTests extends TestUtilities{
 
-	@Test	
+	@Test(groups= {"sanity"})	
 	public void positiveLoginTest() throws IOException {
-		log.info("Starting Positive Login Tests");
-		
-		WelcomePage welcome = new WelcomePage(driver);
+
+		WelcomePage welcome = new WelcomePage(driver,log);
 		SoftAssert sa  =new SoftAssert();	
 		FormAuthenticationPage form = welcome.clickFormAuth();
 		form.typeUsername("tomsmith");
@@ -30,10 +29,10 @@ public class LoginTests extends TestUtilities{
 		
 	}
 
-	@Test(dataProvider="NegativeLoginTest")
+	@Test(dataProvider="NegativeLoginTest",groups= {"sanity","regression"})
 	public void negativeLoginTest(String username, String password, String validity, String expectedMessage) throws IOException {
 		log.info("Starting Negative Login Tests");		
-		WelcomePage welcome = new WelcomePage(driver);
+		WelcomePage welcome = new WelcomePage(driver,log);
 		SoftAssert sa  =new SoftAssert();	
 		FormAuthenticationPage form = welcome.clickFormAuth();
 		form.typeUsername(username);
@@ -41,8 +40,20 @@ public class LoginTests extends TestUtilities{
 		form.clickLoginFail();
 		sa.assertTrue(form.returnValidationMessage().contains(expectedMessage),"No match");
 		sa.assertAll();	
+	}
+		
+		@Test(dataProvider="NegativeLoginTestExcel", groups= {"master"})
+		public void negativeLoginTestExcel(String username, String password, String validity, String expectedMessage) throws IOException {
+			log.info("Starting Negative Login Tests");		
+			WelcomePage welcome = new WelcomePage(driver,log);
+			SoftAssert sa  =new SoftAssert();	
+			FormAuthenticationPage form = welcome.clickFormAuth();
+			form.typeUsername(username);
+			form.typePassword(password);		
+			form.clickLoginFail();
+			sa.assertTrue(form.returnValidationMessage().contains(expectedMessage),"No match");
+			sa.assertAll();	
 		
 	}
-
-
+		
 }
