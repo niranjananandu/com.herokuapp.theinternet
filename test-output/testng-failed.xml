@@ -16,7 +16,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="test"/>
+          <include name="negativeLoginTestCSV"/>
         </methods>
       </class> <!-- com.herokuapp.theinternet.testCases.LoginTests -->
     </classes>

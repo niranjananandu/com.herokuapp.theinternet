@@ -1,0 +1,3 @@
+username,password,Validity,expectedMessage
+tomsmith,,Negative,Your password is invalid!
+,SuperSecretPassword!,Negative,Your username is invalid!

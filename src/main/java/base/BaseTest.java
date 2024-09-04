@@ -1,6 +1,7 @@
 package base;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -18,10 +19,12 @@ public class BaseTest {
 	protected Logger log;
 	protected String testName;
 	protected Properties p;
+	protected String testMethodName;
+	protected String testSuiteName;
 	
 	@Parameters({"browser"})
 	@BeforeMethod(alwaysRun = true)
-	public void setUp(String browser, ITestContext ctx) throws IOException {
+	public void setUp(Method method,String browser, ITestContext ctx) throws IOException {
 		String testName = ctx.getCurrentXmlTest().getName();
 		log = LogManager.getLogger(testName);
 		
@@ -36,6 +39,9 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		log.info("Setup method executed");
 		
+		this.testMethodName = method.getName();
+		this.testSuiteName = ctx.getSuite().getName();
+		this.testName = testName;
 	}
 	
 	@AfterMethod(alwaysRun = true)

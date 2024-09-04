@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestExcel(tomsmith, , Negative, Your password is invalid!)">negativeLoginTestExcel(tomsmith, , Negative, Your password is invalid!)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})">negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestExcel(, SuperSecretPassword!, Negative, Your username is invalid!)">negativeLoginTestExcel(, SuperSecretPassword!, Negative, Your username is invalid!)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)">negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -131,18 +131,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeLoginTestExcel(tomsmith, , Negative, Your password is invalid!)">
-                  </a> <!-- negativeLoginTestExcel(tomsmith, , Negative, Your password is invalid!) -->
-                  <span class="method-name">negativeLoginTestExcel</span>
-                  <span class="parameters">(tomsmith,,Negative,Your password is invalid!)</span>
+                  <a name="negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})">
+                  </a> <!-- negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith}) -->
+                  <span class="method-name">negativeLoginTestCSV</span>
+                  <span class="parameters">({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeLoginTestExcel(, SuperSecretPassword!, Negative, Your username is invalid!)">
-                  </a> <!-- negativeLoginTestExcel(, SuperSecretPassword!, Negative, Your username is invalid!) -->
-                  <span class="method-name">negativeLoginTestExcel</span>
-                  <span class="parameters">(,SuperSecretPassword!,Negative,Your username is invalid!)</span>
+                  <a name="negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)">
+                  </a> <!-- negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...) -->
+                  <span class="method-name">negativeLoginTestCSV</span>
+                  <span class="parameters">({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +158,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;base.Listener&quot;/&gt;
+    &lt;listener class-name=&quot;base.ExtentReportManager&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;CH_LoginTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
@@ -196,7 +196,7 @@
               <span class="test-group-name">master</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">negativeLoginTestExcel</span>
+                <span class="method-in-group-name">negativeLoginTestCSV</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -218,13 +218,13 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'negativeLoginTestExcel')
+data.setCell(0, 1, 'negativeLoginTestCSV')
 data.setCell(0, 2, 'com.herokuapp.theinternet.testCases.LoginTests')
-data.setCell(0, 3, 2189);
+data.setCell(0, 3, 2148);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'negativeLoginTestExcel')
+data.setCell(1, 1, 'negativeLoginTestCSV')
 data.setCell(1, 2, 'com.herokuapp.theinternet.testCases.LoginTests')
-data.setCell(1, 3, 1942);
+data.setCell(1, 3, 2107);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -244,15 +244,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.herokuapp.theinternet.testCases.LoginTests</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">positiveLoginTest</span>
+                <br/>
                 <span class="ignored-method-name">negativeLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">positiveLoginTest</span>
+                <span class="ignored-method-name">negativeLoginTestExcel</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -266,28 +268,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.herokuapp.theinternet.testCases.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@5d5b9ecb)</span>
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.LoginTests.negativeLoginTestCSV(java.util.Map) throw...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeLoginTestExcel(tomsmith, , Negative, Your password is invalid!)</span>
-                <span class="method-start">5133 ms</span>
+                <span class="method-name">negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</span>
+                <span class="method-start">4960 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7325 ms</span>
+                <span class="method-start">7119 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome, org.testng.TestRunner@5d5b9ecb)</span>
-                <span class="method-start">7521 ms</span>
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.LoginTests.negativeLoginTestCSV(java.util.Map) throw...)</span>
+                <span class="method-start">7235 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeLoginTestExcel(, SuperSecretPassword!, Negative, Your username is invalid!)</span>
-                <span class="method-start">11952 ms</span>
+                <span class="method-name">negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)</span>
+                <span class="method-start">11911 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13896 ms</span>
+                <span class="method-start">14020 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

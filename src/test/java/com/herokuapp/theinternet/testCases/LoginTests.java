@@ -1,6 +1,7 @@
 package com.herokuapp.theinternet.testCases;
 
 import java.io.IOException;
+import java.util.Map;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -42,7 +43,7 @@ public class LoginTests extends TestUtilities{
 		sa.assertAll();	
 	}
 		
-		@Test(dataProvider="NegativeLoginTestExcel", groups= {"master"})
+		@Test(dataProvider="NegativeLoginTestExcel", groups= {"regression"})
 		public void negativeLoginTestExcel(String username, String password, String validity, String expectedMessage) throws IOException {
 			log.info("Starting Negative Login Tests");		
 			WelcomePage welcome = new WelcomePage(driver,log);
@@ -51,9 +52,30 @@ public class LoginTests extends TestUtilities{
 			form.typeUsername(username);
 			form.typePassword(password);		
 			form.clickLoginFail();
-			sa.assertTrue(form.returnValidationMessage().contains(expectedMessage),"No match");
+			takeScreenshot();
+			sa.assertTrue(form.returnValidationMessage().contains(expectedMessage),"No match");			
 			sa.assertAll();	
+			
 		
 	}
 		
+		@Test(dataProvider="csvReader", groups= {"master"})
+		public void negativeLoginTestCSV(Map<String, String> testData) throws IOException {			
+			log.info("Starting Negative Login Tests");
+			String username = testData.get("username");
+			String password = testData.get("password");
+			String expectedMessage  = testData.get("expectedMessage");						
+			WelcomePage welcome = new WelcomePage(driver,log);
+			SoftAssert sa  =new SoftAssert();	
+			FormAuthenticationPage form = welcome.clickFormAuth();
+			form.typeUsername(username);
+			form.typePassword(password);		
+			form.clickLoginFail();
+			takeScreenshot();
+			sa.assertTrue(form.returnValidationMessage().contains(expectedMessage),"No match");			
+			sa.assertAll();	
+			
+		
+	}
+				
 }
