@@ -1,16 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T19:06:21 SAST" name="Suite" finished-at="2024-09-04T19:06:36 SAST" duration-ms="15051">
+  <suite started-at="2024-09-06T20:59:52 SAST" name="Suite" finished-at="2024-09-06T21:00:45 SAST" duration-ms="53414">
     <groups>
       <group name="master">
-        <method signature="LoginTests.negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" name="negativeLoginTestCSV" class="com.herokuapp.theinternet.testCases.LoginTests"/>
+        <method signature="CheckboxTests.checkAllCheckboxes()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" name="checkAllCheckboxes" class="com.herokuapp.theinternet.testCases.CheckboxTests"/>
+        <method signature="CheckboxTests.uncheckAllCheckboxes()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" name="uncheckAllCheckboxes" class="com.herokuapp.theinternet.testCases.CheckboxTests"/>
+        <method signature="ContextTests.contextClickTest()[pri:0, instance:com.herokuapp.theinternet.testCases.ContextTests@fbd1f6]" name="contextClickTest" class="com.herokuapp.theinternet.testCases.ContextTests"/>
+        <method signature="DragNDropTests.dragNDropTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DragNDropTests@1c1bbc4e]" name="dragNDropTest" class="com.herokuapp.theinternet.testCases.DragNDropTests"/>
+        <method signature="DropDownTests.DropDownTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DropDownTests@55fe41ea]" name="DropDownTest" class="com.herokuapp.theinternet.testCases.DropDownTests"/>
+        <method signature="DynamicLoadingTests.dynamicLoadingTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DynamicLoadingTests@10683d9d]" name="dynamicLoadingTest" class="com.herokuapp.theinternet.testCases.DynamicLoadingTests"/>
+        <method signature="LoginTests.negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" name="negativeLoginTestCSV" class="com.herokuapp.theinternet.testCases.LoginTests"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2024-09-04T19:06:21 SAST" name="CH_LoginTest" finished-at="2024-09-04T19:06:36 SAST" duration-ms="15051">
+    <test started-at="2024-09-06T20:59:52 SAST" name="CH_LoginTest" finished-at="2024-09-06T21:00:45 SAST" duration-ms="53414">
+      <class name="com.herokuapp.theinternet.testCases.ContextTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.ContextTests@fbd1f6]" started-at="2024-09-06T21:00:16 SAST" name="setUp" finished-at="2024-09-06T21:00:21 SAST" duration-ms="4498" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.ContextTests.contextClickTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="contextClickTest()[pri:0, instance:com.herokuapp.theinternet.testCases.ContextTests@fbd1f6]" started-at="2024-09-06T21:00:21 SAST" name="contextClickTest" finished-at="2024-09-06T21:00:21 SAST" duration-ms="650" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+No match expected [You selected a context memnu] but found [You selected a context menu]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+No match expected [You selected a context memnu] but found [You selected a context menu]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at com.herokuapp.theinternet.testCases.ContextTests.contextClickTest(ContextTests.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contextClickTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.ContextTests@fbd1f6]" started-at="2024-09-06T21:00:21 SAST" name="tearDown" finished-at="2024-09-06T21:00:22 SAST" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.testCases.ContextTests -->
+      <class name="com.herokuapp.theinternet.testCases.CheckboxTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:34 SAST" name="setUp" finished-at="2024-09-06T21:00:39 SAST" duration-ms="4583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.CheckboxTests.checkAllCheckboxes()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkAllCheckboxes()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:39 SAST" name="checkAllCheckboxes" finished-at="2024-09-06T21:00:40 SAST" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAllCheckboxes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:40 SAST" name="tearDown" finished-at="2024-09-06T21:00:40 SAST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:40 SAST" name="setUp" finished-at="2024-09-06T21:00:44 SAST" duration-ms="4572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.CheckboxTests.uncheckAllCheckboxes()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="uncheckAllCheckboxes()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:44 SAST" name="uncheckAllCheckboxes" finished-at="2024-09-06T21:00:45 SAST" duration-ms="563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uncheckAllCheckboxes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.CheckboxTests@5dda768f]" started-at="2024-09-06T21:00:45 SAST" name="tearDown" finished-at="2024-09-06T21:00:45 SAST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.testCases.CheckboxTests -->
+      <class name="com.herokuapp.theinternet.testCases.DragNDropTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.DragNDropTests@1c1bbc4e]" started-at="2024-09-06T21:00:04 SAST" name="setUp" finished-at="2024-09-06T21:00:10 SAST" duration-ms="6037" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.DragNDropTests.dragNDropTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dragNDropTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DragNDropTests@1c1bbc4e]" started-at="2024-09-06T21:00:10 SAST" name="dragNDropTest" finished-at="2024-09-06T21:00:11 SAST" duration-ms="532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dragNDropTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.DragNDropTests@1c1bbc4e]" started-at="2024-09-06T21:00:11 SAST" name="tearDown" finished-at="2024-09-06T21:00:11 SAST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.testCases.DragNDropTests -->
+      <class name="com.herokuapp.theinternet.testCases.DynamicLoadingTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.DynamicLoadingTests@10683d9d]" started-at="2024-09-06T20:59:52 SAST" name="setUp" finished-at="2024-09-06T20:59:58 SAST" duration-ms="5104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.DynamicLoadingTests.dynamicLoadingTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="dynamicLoadingTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DynamicLoadingTests@10683d9d]" started-at="2024-09-06T20:59:58 SAST" name="dynamicLoadingTest" finished-at="2024-09-06T21:00:04 SAST" duration-ms="6430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dynamicLoadingTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.DynamicLoadingTests@10683d9d]" started-at="2024-09-06T21:00:04 SAST" name="tearDown" finished-at="2024-09-06T21:00:04 SAST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.testCases.DynamicLoadingTests -->
       <class name="com.herokuapp.theinternet.testCases.LoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:22 SAST" name="setUp" finished-at="2024-09-04T19:06:26 SAST" duration-ms="4959" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:22 SAST" name="setUp" finished-at="2024-09-06T21:00:26 SAST" duration-ms="4459" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,14 +223,14 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@54755dd9]]>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:26 SAST" name="negativeLoginTestCSV" data-provider="csvReader" finished-at="2024-09-04T19:06:29 SAST" duration-ms="2148" status="PASS">
+        <test-method signature="negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:26 SAST" name="negativeLoginTestCSV" data-provider="csvReader" finished-at="2024-09-06T21:00:28 SAST" duration-ms="1954" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,11 +241,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTestCSV -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:29 SAST" name="tearDown" finished-at="2024-09-04T19:06:29 SAST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:28 SAST" name="tearDown" finished-at="2024-09-06T21:00:28 SAST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:29 SAST" name="setUp" finished-at="2024-09-04T19:06:33 SAST" duration-ms="4676" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:28 SAST" name="setUp" finished-at="2024-09-06T21:00:33 SAST" duration-ms="4480" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,14 +259,14 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@54755dd9]]>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:33 SAST" name="negativeLoginTestCSV" data-provider="csvReader" finished-at="2024-09-04T19:06:36 SAST" duration-ms="2107" status="PASS">
+        <test-method signature="negativeLoginTestCSV(java.util.Map)[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:33 SAST" name="negativeLoginTestCSV" data-provider="csvReader" finished-at="2024-09-06T21:00:34 SAST" duration-ms="1758" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,11 +277,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTestCSV -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@6025e1b6]" started-at="2024-09-04T19:06:36 SAST" name="tearDown" finished-at="2024-09-04T19:06:36 SAST" duration-ms="124" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.LoginTests@1ce24091]" started-at="2024-09-06T21:00:34 SAST" name="tearDown" finished-at="2024-09-06T21:00:34 SAST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.herokuapp.theinternet.testCases.LoginTests -->
+      <class name="com.herokuapp.theinternet.testCases.DropDownTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,java.lang.String,org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.testCases.DropDownTests@55fe41ea]" started-at="2024-09-06T21:00:11 SAST" name="setUp" finished-at="2024-09-06T21:00:15 SAST" duration-ms="4537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.testCases.DropDownTests.DropDownTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee88e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="DropDownTest()[pri:0, instance:com.herokuapp.theinternet.testCases.DropDownTests@55fe41ea]" started-at="2024-09-06T21:00:15 SAST" name="DropDownTest" finished-at="2024-09-06T21:00:16 SAST" duration-ms="596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DropDownTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.testCases.DropDownTests@55fe41ea]" started-at="2024-09-06T21:00:16 SAST" name="tearDown" finished-at="2024-09-06T21:00:16 SAST" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.testCases.DropDownTests -->
     </test> <!-- CH_LoginTest -->
   </suite> <!-- Suite -->
 </testng-results>

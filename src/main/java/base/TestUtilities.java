@@ -36,12 +36,11 @@ public class TestUtilities extends BaseTest {
 		}
 	}
 
-	public void takeScreenshot() {
-
+	public  String takeScreenshot() {
 		File SrcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String pathname = System.getProperty("user.dir") + File.separator + "test-output" + File.separator
 				+ "Screenshots" + File.separator + getTodaysDate() + File.separator + testName + File.separator
-				+ testMethodName + getSystemTime() + ".png";
+				+ testMethodName + "_"+getSystemTime() + ".png";
 		// String pathname = System.getProperty("user.dir")+"test.png";
 		File DestFile = new File(pathname);
 		try {
@@ -50,7 +49,7 @@ public class TestUtilities extends BaseTest {
 			e.printStackTrace();
 		}
 
-		// System.out.println(pathname);
+		return pathname;
 
 	}
 

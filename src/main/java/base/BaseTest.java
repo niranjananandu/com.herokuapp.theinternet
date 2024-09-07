@@ -15,12 +15,12 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest {
 	
-	protected WebDriver driver;
-	protected Logger log;
-	protected String testName;
-	protected Properties p;
-	protected String testMethodName;
-	protected String testSuiteName;
+	protected static WebDriver driver;
+	protected  Logger log;
+	protected static String testName;
+	protected  Properties p;
+	protected static String testMethodName;
+	protected static String testSuiteName;
 	
 	@Parameters({"browser"})
 	@BeforeMethod(alwaysRun = true)
@@ -39,9 +39,9 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		log.info("Setup method executed");
 		
-		this.testMethodName = method.getName();
-		this.testSuiteName = ctx.getSuite().getName();
-		this.testName = testName;
+		BaseTest.testMethodName = method.getName();
+		BaseTest.testSuiteName = ctx.getSuite().getName();
+		BaseTest.testName = testName;
 	}
 	
 	@AfterMethod(alwaysRun = true)

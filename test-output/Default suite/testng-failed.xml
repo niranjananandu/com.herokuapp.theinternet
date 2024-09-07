@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.testCases.ReadExcelDataTest">
+      <class name="com.herokuapp.theinternet.testCases.ContextTests">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="readFromExcelTest"/>
+          <include name="contextClickTest"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.testCases.ReadExcelDataTest -->
+      </class> <!-- com.herokuapp.theinternet.testCases.ContextTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

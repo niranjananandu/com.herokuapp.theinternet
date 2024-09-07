@@ -6,16 +6,20 @@
 	</listeners>
 
 	<test name="CH_LoginTest">
-		<parameter name="browser" value="chrome"/>
+		<parameter name="browser" value="chrome" />
 		<groups>
 			<run>
-				<include name="master"/>
+				<include name="master" />
 			</run>
 		</groups>
 		<classes>
-			<class name="com.herokuapp.theinternet.testCases.LoginTests"/>
-			<!--<class name="com.herokuapp.theinternet.testCases.iFrameTests" />
-			<class name="com.herokuapp.theinternet.testCases.ReadExcelDataTest" />-->
+		<class name="com.herokuapp.theinternet.testCases.DynamicLoadingTests" />		
+		<class name="com.herokuapp.theinternet.testCases.DragNDropTests" />
+		<class name="com.herokuapp.theinternet.testCases.DropDownTests" />
+			<class name="com.herokuapp.theinternet.testCases.ContextTests" />
+		 <class name="com.herokuapp.theinternet.testCases.LoginTests" />
+			<class name="com.herokuapp.theinternet.testCases.CheckboxTests" />
+			<class name="com.herokuapp.theinternet.testCases.iFrameTests" />
 		</classes>
 	</test> <!--
 	LoginTest -->

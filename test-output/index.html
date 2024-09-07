@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.ContextTests" class="method navigator-link" hash-for-method="contextClickTest">contextClickTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,37 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.DropDownTests" class="method navigator-link" hash-for-method="DropDownTest">DropDownTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.CheckboxTests" class="method navigator-link" hash-for-method="checkAllCheckboxes">checkAllCheckboxes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.DragNDropTests" class="method navigator-link" hash-for-method="dragNDropTest">dragNDropTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.DynamicLoadingTests" class="method navigator-link" hash-for-method="dynamicLoadingTest">dynamicLoadingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})">negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.LoginTests" class="method navigator-link" hash-for-method="negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)">negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.herokuapp.theinternet.testCases.CheckboxTests" class="method navigator-link" hash-for-method="uncheckAllCheckboxes">uncheckAllCheckboxes</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -123,6 +162,94 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.testCases.ContextTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contextClickTest">
+                  </a> <!-- contextClickTest -->
+                  <span class="method-name">contextClickTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	No match expected [You selected a context memnu] but found [You selected a context menu]
+	at com.herokuapp.theinternet.testCases.ContextTests.contextClickTest(ContextTests.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.testCases.CheckboxTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkAllCheckboxes">
+                  </a> <!-- checkAllCheckboxes -->
+                  <span class="method-name">checkAllCheckboxes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uncheckAllCheckboxes">
+                  </a> <!-- uncheckAllCheckboxes -->
+                  <span class="method-name">uncheckAllCheckboxes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.testCases.DragNDropTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dragNDropTest">
+                  </a> <!-- dragNDropTest -->
+                  <span class="method-name">dragNDropTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.testCases.DynamicLoadingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dynamicLoadingTest">
+                  </a> <!-- dynamicLoadingTest -->
+                  <span class="method-name">dynamicLoadingTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.herokuapp.theinternet.testCases.DropDownTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DropDownTest">
+                  </a> <!-- DropDownTest -->
+                  <span class="method-name">DropDownTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -168,7 +295,13 @@
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.DynamicLoadingTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.DragNDropTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.DropDownTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.ContextTests&quot;/&gt;
       &lt;class name=&quot;com.herokuapp.theinternet.testCases.LoginTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.CheckboxTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.theinternet.testCases.iFrameTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- CH_LoginTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -182,7 +315,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CH_LoginTest (1 class)</span>
+                <span class="test-name">CH_LoginTest (7 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,7 +329,31 @@
               <span class="test-group-name">master</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">DropDownTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkAllCheckboxes</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">contextClickTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">dragNDropTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">dynamicLoadingTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">negativeLoginTestCSV</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">uncheckAllCheckboxes</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -216,20 +373,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'negativeLoginTestCSV')
-data.setCell(0, 2, 'com.herokuapp.theinternet.testCases.LoginTests')
-data.setCell(0, 3, 2148);
+data.setCell(0, 1, 'dynamicLoadingTest')
+data.setCell(0, 2, 'com.herokuapp.theinternet.testCases.DynamicLoadingTests')
+data.setCell(0, 3, 6430);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'negativeLoginTestCSV')
 data.setCell(1, 2, 'com.herokuapp.theinternet.testCases.LoginTests')
-data.setCell(1, 3, 2107);
+data.setCell(1, 3, 1954);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'negativeLoginTestCSV')
+data.setCell(2, 2, 'com.herokuapp.theinternet.testCases.LoginTests')
+data.setCell(2, 3, 1758);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'contextClickTest')
+data.setCell(3, 2, 'com.herokuapp.theinternet.testCases.ContextTests')
+data.setCell(3, 3, 650);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'DropDownTest')
+data.setCell(4, 2, 'com.herokuapp.theinternet.testCases.DropDownTests')
+data.setCell(4, 3, 596);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'uncheckAllCheckboxes')
+data.setCell(5, 2, 'com.herokuapp.theinternet.testCases.CheckboxTests')
+data.setCell(5, 3, 563);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkAllCheckboxes')
+data.setCell(6, 2, 'com.herokuapp.theinternet.testCases.CheckboxTests')
+data.setCell(6, 3, 550);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'dragNDropTest')
+data.setCell(7, 2, 'com.herokuapp.theinternet.testCases.DragNDropTests')
+data.setCell(7, 3, 532);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -244,15 +425,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
+              <span class="ignored-class-name">com.herokuapp.theinternet.testCases.iFrameTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">iframeTest</span>
+                <br/>
+                <span class="ignored-method-name">nestedFramesTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">com.herokuapp.theinternet.testCases.LoginTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">positiveLoginTest</span>
-                <br/>
                 <span class="ignored-method-name">negativeLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">positiveLoginTest</span>
                 <br/>
                 <span class="ignored-method-name">negativeLoginTestExcel</span>
                 <br/>
@@ -266,30 +456,119 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.DynamicLoadingTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.LoginTests.negativeLoginTestCSV(java.util.Map) throw...)</span>
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.DynamicLoadingTests.dynamicLoadingTest(), chrome, or...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</span>
-                <span class="method-start">4960 ms</span>
+                <span class="method-name">dynamicLoadingTest</span>
+                <span class="method-start">5106 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7119 ms</span>
+                <span class="method-start">11549 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.DragNDropTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.DragNDropTests.dragNDropTest(), chrome, org.testng.T...)</span>
+                <span class="method-start">11682 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">dragNDropTest</span>
+                <span class="method-start">17720 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">18253 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.DropDownTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.DropDownTests.DropDownTest(), chrome, org.testng.Tes...)</span>
+                <span class="method-start">18446 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">DropDownTest</span>
+                <span class="method-start">22984 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23581 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.ContextTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.ContextTests.contextClickTest(), chrome, org.testng....)</span>
+                <span class="method-start">23705 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">contextClickTest</span>
+                <span class="method-start">28203 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">28992 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.LoginTests.negativeLoginTestCSV(java.util.Map) throw...)</span>
+                <span class="method-start">29180 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">negativeLoginTestCSV({Validity=Negative, password=, expectedMessage=Your password is invalid!, username=tomsmith})</span>
+                <span class="method-start">33639 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35594 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.LoginTests.negativeLoginTestCSV(java.util.Map) throw...)</span>
-                <span class="method-start">7235 ms</span>
+                <span class="method-start">35760 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">negativeLoginTestCSV({Validity=Negative, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, userna...)</span>
-                <span class="method-start">11911 ms</span>
+                <span class="method-start">40240 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14020 ms</span>
+                <span class="method-start">41999 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.theinternet.testCases.CheckboxTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.CheckboxTests.checkAllCheckboxes(), chrome, org.test...)</span>
+                <span class="method-start">42076 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkAllCheckboxes</span>
+                <span class="method-start">46659 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47210 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.herokuapp.theinternet.testCases.CheckboxTests.uncheckAllCheckboxes(), chrome, org.te...)</span>
+                <span class="method-start">47313 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">uncheckAllCheckboxes</span>
+                <span class="method-start">51885 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52449 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
