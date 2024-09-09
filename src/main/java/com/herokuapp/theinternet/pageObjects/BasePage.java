@@ -1,6 +1,8 @@
 package com.herokuapp.theinternet.pageObjects;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
@@ -43,6 +45,11 @@ public class BasePage {
 		Actions action =  new Actions(driver);
 		action.dragAndDrop(driver.findElement(from), driver.findElement(to));
 	}
+	
+	public String returnCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
+	
 	
 	protected void performDragAndDrop(By from, By to) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -109,6 +116,27 @@ public class BasePage {
 	
 	public String getAlertText() {
 		return switchtoAlert().getText();
+	}
+	
+	public String getCurrentPageTitle() {
+		return driver.getTitle();
+	}
+	
+	public void switchTowindowWithTitle(String title) {		
+		String firstWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+		Iterator<String> windowsIterator = allWindows.iterator();
+		
+		while(windowsIterator.hasNext()) {
+			String windowHandle = windowsIterator.next().toString();
+			if(!windowHandle.equals(firstWindow)) {
+				driver.switchTo().window(windowHandle);
+				if(getCurrentPageTitle().equals(title)) {
+					break;
+				}
+			}
+		}
+		
 	}
 	
 

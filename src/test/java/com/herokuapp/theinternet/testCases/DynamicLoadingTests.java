@@ -10,7 +10,7 @@ import com.herokuapp.theinternet.pageObjects.WelcomePage;
 import base.TestUtilities;
 
 public class DynamicLoadingTests extends TestUtilities{
-	@Test(groups= {"master"})
+	@Test(groups= {"sanity","master"})
 	public void dynamicLoadingTest() {
 		
 		SoftAssert sa = new SoftAssert();

@@ -14,7 +14,7 @@ import base.TestUtilities;
 
 public class LoginTests extends TestUtilities{
 
-	@Test(groups= {"sanity"})	
+	@Test(groups= {"sanity","master"})	
 	public void positiveLoginTest() throws IOException {
 
 		WelcomePage welcome = new WelcomePage(driver,log);
@@ -30,7 +30,7 @@ public class LoginTests extends TestUtilities{
 		
 	}
 
-	@Test(dataProvider="NegativeLoginTest",groups= {"sanity","regression"})
+	@Test(dataProvider="NegativeLoginTest",groups= {"sanity","regression","master"})
 	public void negativeLoginTest(String username, String password, String validity, String expectedMessage) throws IOException {
 		log.info("Starting Negative Login Tests");		
 		WelcomePage welcome = new WelcomePage(driver,log);

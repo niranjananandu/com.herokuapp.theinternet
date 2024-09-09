@@ -15,7 +15,7 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest {
 	
-	protected static WebDriver driver;
+	protected  static WebDriver driver;
 	protected  Logger log;
 	protected static String testName;
 	protected  Properties p;
@@ -47,7 +47,7 @@ public class BaseTest {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		log.info("Executing Teardown method");
-		driver.close();
+		driver.quit();
 		log.info("Driver closed");
 	}
 	

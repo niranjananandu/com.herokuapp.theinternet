@@ -13,8 +13,18 @@ public class WelcomePage extends BasePage {
 	private By link_DragNDrop = By.xpath("//a[normalize-space()='Drag and Drop']");
 	private By link_DropDown = By.xpath("//a[normalize-space()='Dropdown']");
 	private By link_DynamicLoading = By.xpath("//a[normalize-space()='Dynamic Loading']");
-
-
+	private By link_Entry_ad = By.xpath("//a[normalize-space()='Entry Ad']");
+	private By link_file_upload = By.xpath("//a[normalize-space()='File Upload']");
+	private By link_hovers = By.xpath("//a[normalize-space()='Hovers']");
+	private By link_horizontalSlider = By.xpath("//a[normalize-space()='Horizontal Slider']");
+	private By link_jsAlerts = By.xpath("//a[normalize-space()='JavaScript Alerts']");
+	private By link_keyPresses =  By.xpath("//a[normalize-space()='Key Presses']");
+	private By link_multipleWindows =  By.xpath("//a[normalize-space()='Multiple Windows']");
+	private By link_notificationMessages =  By.xpath("//a[normalize-space()='Notification Messages']");
+	private By link_shadowDom = By.xpath("//a[normalize-space()='Shadow DOM']");
+	private By link_sortableTables = By.xpath("//a[normalize-space()='Sortable Data Tables']");
+	private By link_geolocation = By.xpath("//a[normalize-space()='Geolocation']");
+	
 	public WelcomePage(WebDriver driver,Logger log) {
 		super(driver,log);
 	}
@@ -53,4 +63,60 @@ public class WelcomePage extends BasePage {
 		driver.findElement(link_DynamicLoading).click();
 		return new DynamicLoadingPage(driver,log);
 	}
+	
+	public EntryAdPage clickEntryAd() {
+		driver.findElement(link_Entry_ad).click();
+		return new EntryAdPage(driver,log);
+	}
+	
+	public FileUploadPage clickFileUpload() {
+		driver.findElement(link_file_upload).click();
+		return new FileUploadPage(driver,log);
+	}
+	
+	public HoversPage clickHovers() {
+		driver.findElement(link_hovers).click();
+		return new HoversPage(driver,log);
+	}
+	
+	public HorizontalSliderPage clickHorizontalSlider() 	{
+		driver.findElement(link_horizontalSlider).click();
+		return new HorizontalSliderPage(driver,log);
+	}
+	
+	public JSAlertsPage clickJSAlerts() {
+		driver.findElement(link_jsAlerts).click();
+		return new JSAlertsPage(driver,log);
+	}
+	
+	public KeyPressesPage clickKeyPresses() {
+		driver.findElement(link_keyPresses).click();
+		return new KeyPressesPage(driver,log);
+	}
+	
+	public MultipleWindowsPage clickMultipleWindows() {
+		driver.findElement(link_multipleWindows).click();
+		return new MultipleWindowsPage(driver,log);
+	}
+	
+	public NotificationMessagesPage clickNotificationMessages() {
+		driver.findElement(link_notificationMessages).click();
+		return new NotificationMessagesPage(driver,log);
+	}
+	
+	public ShadowDOMPage clickShadowDOM() {
+		driver.findElement(link_shadowDom).click();
+		return new ShadowDOMPage(driver,log);
+	}
+	
+	public SortableTablesPage clickSortableTables() {
+		driver.findElement(link_sortableTables).click();
+		return new SortableTablesPage(driver,log);
+	}
+	
+	public GeolocationPage clickGeolocation() {
+		driver.findElement(link_geolocation).click();
+		return new GeolocationPage(driver,log);
+	}
+
 }

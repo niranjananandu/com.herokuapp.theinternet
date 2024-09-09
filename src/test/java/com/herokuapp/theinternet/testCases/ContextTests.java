@@ -10,7 +10,7 @@ import base.TestUtilities;
 
 public class ContextTests extends TestUtilities {
 	
-	@Test(groups= {"master"})
+	@Test(groups= {"sanity","master"})
 	public void contextClickTest() {
 		SoftAssert sa = new SoftAssert();
 		WelcomePage welcome = new WelcomePage(driver, log);

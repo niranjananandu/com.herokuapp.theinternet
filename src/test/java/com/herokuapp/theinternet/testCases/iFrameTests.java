@@ -12,7 +12,7 @@ import base.TestUtilities;
 
 public class iFrameTests extends TestUtilities{
 	
-	@Test(groups= {"sanity"})
+	@Test(groups= {"sanity","master"})
 	public void iframeTest() {		
 		SoftAssert sa = new SoftAssert();
 		WelcomePage welcome = new WelcomePage(driver,log);
@@ -24,7 +24,7 @@ public class iFrameTests extends TestUtilities{
 		
 	}
 	
-	@Test(groups= {"regression"})
+	@Test(groups= {"regression","master"})
 	public void nestedFramesTest() {
 		SoftAssert sa = new SoftAssert();
 		WelcomePage welcome = new WelcomePage(driver,log);

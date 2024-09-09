@@ -9,7 +9,7 @@ import base.TestUtilities;
 
 public class CheckboxTests extends TestUtilities {
 
-	@Test(groups = { "master" })
+	@Test(groups = { "regression" ,"master"})
 	public void checkAllCheckboxes() {
 
 		WelcomePage welcome = new WelcomePage(driver, log);
@@ -19,7 +19,7 @@ public class CheckboxTests extends TestUtilities {
 
 	}
 
-	@Test(groups = { "master" })
+	@Test(groups = { "sanity","master" })
 	public void uncheckAllCheckboxes() {
 
 		WelcomePage welcome = new WelcomePage(driver, log);

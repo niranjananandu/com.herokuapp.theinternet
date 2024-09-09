@@ -10,7 +10,7 @@ import base.TestUtilities;
 
 public class DropDownTests extends TestUtilities{
 
-	@Test(groups= {"master"})
+	@Test(groups= {"master","regression"})
 	public void dropDownTest() {
 		SoftAssert sa = new SoftAssert();
 		WelcomePage welcome  =new WelcomePage(driver,log);
