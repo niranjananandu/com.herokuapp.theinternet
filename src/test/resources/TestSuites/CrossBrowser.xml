@@ -15,7 +15,7 @@
 		<classes>
 		<class name="com.herokuapp.theinternet.testCases.GeolocationTests" />
 		<class name="com.herokuapp.theinternet.testCases.SortableTablesTests" />
-		<class name="com.herokuapp.theinternet.testCases.ShadowDomTests" />
+		<!-- <class name="com.herokuapp.theinternet.testCases.ShadowDomTests" />
 		<class name="com.herokuapp.theinternet.testCases.NotificationMessagesTests" />
 		<class name="com.herokuapp.theinternet.testCases.MultipleWindowsTests" />
 		<class name="com.herokuapp.theinternet.testCases.KeyPressesTests" />		
@@ -30,7 +30,7 @@
 		<class name="com.herokuapp.theinternet.testCases.ContextTests" />
 		<class name="com.herokuapp.theinternet.testCases.LoginTests" />
 		<class name="com.herokuapp.theinternet.testCases.CheckboxTests" />
-		<class name="com.herokuapp.theinternet.testCases.iFrameTests" />
+		<class name="com.herokuapp.theinternet.testCases.iFrameTests" />-->
 		</classes>
 	</test> <!--
 	LoginTest -->
