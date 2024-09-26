@@ -27,6 +27,11 @@ pipeline {
         }
         success {
             echo "Build successful"
+            script {
+                mail to: 'nanduniranjana@gmail.com',
+                     subject: "Build successful",
+                     body: "The build is successful."
+            }
         }
         failure {
             script {
