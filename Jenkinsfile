@@ -23,7 +23,7 @@ pipeline {
     post {
         always {
             echo "Executing post scripts"
-             junit 'build/reports/**/*.xml'
+             junit 'testng 'target/surefire-reports/testng-results.xml'
         }
         success {
             echo "Build successful"
