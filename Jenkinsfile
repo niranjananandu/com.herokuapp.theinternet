@@ -23,6 +23,7 @@ pipeline {
     post {
         always {
             echo "Executing post scripts"
+             junit 'build/reports/**/*.xml'
         }
         success {
             echo "Build successful"
