@@ -19,4 +19,16 @@ pipeline {
             }
         }
     }
+	
+	post{
+	always{
+	echo "Executing post scripts"
+	}
+	success{
+	echo "Build successful"
+	}
+	failure{
+	mail to: nanduniranjana@gmail.com, subject: "The pipeline failed"
+	}
+	
 }
