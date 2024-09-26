@@ -19,16 +19,20 @@ pipeline {
             }
         }
     }
-	
-	post{
-	always{
-	echo "Executing post scripts"
-	}
-	success{
-	echo "Build successful"
-	}
-	failure{
-	mail to: nanduniranjana@gmail.com, subject: "The pipeline failed"
-	}
-	
+    
+    post {
+        always {
+            echo "Executing post scripts"
+        }
+        success {
+            echo "Build successful"
+        }
+        failure {
+            script {
+                mail to: 'nanduniranjana@gmail.com',
+                     subject: "The pipeline failed",
+                     body: "The pipeline has failed. Please check the Jenkins job for details."
+            }
+        }
+    }
 }
